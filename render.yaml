@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: telebot
+    runtime: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    healthCheckPath: /
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: REQUIRED_CHANNEL_USERNAME
+        sync: false
+      - key: SUPPORT_USERNAME
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: UPI_ID
+        sync: false
+      - key: WEBHOOK_SECRET
+        sync: false
+      - key: WEBHOOK_BASE_URL
+        value: https://telebot.onrender.com
+      - key: WEBHOOK_PATH
+        value: /webhook
