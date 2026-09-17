@@ -1,0 +1,29 @@
+# environment files
+.env
+.env.*
+!.env.example
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+
+# virtual environments
+.venv/
+venv/
+env/
+
+# databases
+*.db
+*.db.bak
+*.sqlite
+*.sqlite3
+
+# logs
+*.log
+
+# editors / os
+.vscode/
+.idea/
+__MACOSX/
+.DS_Store
